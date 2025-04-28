@@ -1,0 +1,31 @@
+{
+    "output": "output",
+    "name": "python_transcriber",
+    "console": true,
+    "onefile": false,
+    "icon": null,
+    "additionalFiles": [
+        {
+            "source": "SRC/vosk-model",
+            "destination": "vosk-model"
+        }
+    ],
+    "additionalBins": [],
+    "hiddenImports": [],
+    "collectSubmodules": [],
+    "advanced": {
+        "excludeModules": [],
+        "includeModules": []
+    },
+    "runtime": {
+        "useUPX": true,
+        "useConsole": true
+    },
+    "outputDirectory": "dist",
+    "specFile": false,
+    "cleanBuild": true,
+    "disableRecursionLimit": false,
+    "encryptPython": false,
+    "cipherKey": null,
+    "includePyInstaller": false
+}
