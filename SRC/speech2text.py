@@ -1,6 +1,6 @@
 from vosk import Model, KaldiRecognizer
 import wave
-from pydub import AudioSegment  # Import AudioSegment for file conversion
+from pydub import AudioSegment
 import os
 import sys
 
