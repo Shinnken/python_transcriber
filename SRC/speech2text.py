@@ -3,17 +3,18 @@ import wave
 from pydub import AudioSegment
 import os
 import sys
+from shutil import which
 
 def transcribe_audio(file_path):
     """
     Transcribe audio from a file using the Vosk library.
-    
-    Args:
-        file_path (str): Path to the audio file.
-    
-    Returns:
-        str: Transcribed text.
     """
+    # Check if FFmpeg is installed
+    if which("ffmpeg") is None:
+        raise EnvironmentError(
+            "FFmpeg is not installed or not found in PATH. Please install FFmpeg and ensure it is accessible."
+        )
+
     original_file_path = file_path  # Keep track of the original file path
 
     # Convert to .wav if necessary
@@ -38,7 +39,10 @@ def transcribe_audio(file_path):
         model_path = os.path.join(base_path, "vosk-model")
 
         if not os.path.exists(model_path):
-            return "Vosk model not found. Please download and place it in the 'vosk-model' directory."
+            raise FileNotFoundError(
+                f"Vosk model not found at '{model_path}'. Please download the model from 'https://alphacephei.com/vosk/models' "
+                "and place it in the 'vosk-model' directory."
+            )
 
         model = Model(model_path)
         recognizer = KaldiRecognizer(model, 16000)

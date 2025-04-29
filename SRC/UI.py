@@ -55,13 +55,21 @@ class TranscriberApp(ctk.CTk):
             if transcription:
                 save_path = filedialog.asksaveasfilename(defaultextension=".txt", filetypes=[("Text Files", "*.txt")])
                 if save_path:
-                    with open(save_path, "w") as file:
+                    with open(save_path, "w", encoding="utf-8") as file:
                         file.write(transcription)
                     messagebox.showinfo("Success", f"Transcription saved to {save_path}")
             else:
                 messagebox.showerror("Error", "Failed to transcribe the audio file.")
         except Exception as e:
+            # Capture the traceback and print it to stderr
+            import traceback
+            print(f"Error during transcription: {e}", traceback.format_exc(), file=sys.stderr)  # Corrected to use format_exc()
+            # Show error message to the user
             messagebox.showerror("Error", f"An error occurred: {e}")
+
+
+
+
         finally:
             # Stop the progress bar animation
             self.progress_bar.stop()

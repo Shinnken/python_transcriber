@@ -1,31 +1,73 @@
 {
-    "output": "output",
-    "name": "python_transcriber",
-    "console": true,
-    "onefile": false,
-    "icon": null,
-    "additionalFiles": [
-        {
-            "source": "SRC/vosk-model",
-            "destination": "vosk-model"
-        }
-    ],
-    "additionalBins": [],
-    "hiddenImports": [],
-    "collectSubmodules": [],
-    "advanced": {
-        "excludeModules": [],
-        "includeModules": []
-    },
-    "runtime": {
-        "useUPX": true,
-        "useConsole": true
-    },
-    "outputDirectory": "dist",
-    "specFile": false,
-    "cleanBuild": true,
-    "disableRecursionLimit": false,
-    "encryptPython": false,
-    "cipherKey": null,
-    "includePyInstaller": false
+ "version": "auto-py-to-exe-configuration_v1",
+ "pyinstallerOptions": [
+  {
+   "optionDest": "noconfirm",
+   "value": true
+  },
+  {
+   "optionDest": "filenames",
+   "value": "C:/Users/konra/Documents/git/python_transcriber/SRC/UI.py"
+  },
+  {
+   "optionDest": "onefile",
+   "value": true
+  },
+  {
+   "optionDest": "console",
+   "value": false
+  },
+  {
+   "optionDest": "icon_file",
+   "value": "C:/Users/konra/Documents/git/python_transcriber/1000_F_268746939_i6LodsbuWGuPyKGiUfQErFI6WdZ0Y2o6.ico"
+  },
+  {
+   "optionDest": "clean_build",
+   "value": false
+  },
+  {
+   "optionDest": "strip",
+   "value": false
+  },
+  {
+   "optionDest": "noupx",
+   "value": false
+  },
+  {
+   "optionDest": "disable_windowed_traceback",
+   "value": false
+  },
+  {
+   "optionDest": "uac_admin",
+   "value": false
+  },
+  {
+   "optionDest": "uac_uiaccess",
+   "value": false
+  },
+  {
+   "optionDest": "argv_emulation",
+   "value": false
+  },
+  {
+   "optionDest": "bootloader_ignore_signals",
+   "value": false
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/konra/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0/LocalCache/local-packages/Python310/site-packages/customtkinter;customtkinter/"
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/konra/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0/LocalCache/local-packages/Python310/site-packages/vosk;vosk/"
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/konra/Documents/git/python_transcriber/SRC/vosk-model;vosk-model/"
+  }
+ ],
+ "nonPyinstallerOptions": {
+  "increaseRecursionLimit": true,
+  "manualArguments": ""
+ }
 }
