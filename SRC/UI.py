@@ -27,7 +27,7 @@ class TranscriberApp(ctk.CTk):
         self.progress_bar.set(0)  # Initially set to 0
 
     def pick_file(self):
-        file_path = filedialog.askopenfilename(filetypes=[("Audio Files", "*.wav *.mp3 *.flac")])
+        file_path = filedialog.askopenfilename(filetypes=[("Audio Files", "*.wav *.mp3 *.flac *.m4a")])
         if file_path:
             if self.is_audio_file(file_path):
                 self.file_path = file_path
@@ -36,7 +36,7 @@ class TranscriberApp(ctk.CTk):
                 messagebox.showerror("Invalid File", "Please select a valid audio file.")
 
     def is_audio_file(self, file_path):
-        return file_path.lower().endswith(('.wav', '.mp3', '.flac'))
+        return file_path.lower().endswith(('.wav', '.mp3', '.flac', '.m4a'))
 
     def transcribe_and_save(self):
         if not self.file_path:
@@ -66,9 +66,6 @@ class TranscriberApp(ctk.CTk):
             print(f"Error during transcription: {e}", traceback.format_exc(), file=sys.stderr)  # Corrected to use format_exc()
             # Show error message to the user
             messagebox.showerror("Error", f"An error occurred: {e}")
-
-
-
 
         finally:
             # Stop the progress bar animation
