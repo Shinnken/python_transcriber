@@ -12,6 +12,25 @@ Python Transcriber is a free and easy-to-use tool for transcribing audio files i
 - Python 3.7 or higher
 - [FFmpeg](https://ffmpeg.org/download.html) installed and added to your system's PATH.
 
+### Installing FFmpeg
+If you don't have FFmpeg installed, you can use the `ffmpeg_install.sh` script to install it automatically. This script is designed to work with Git Bash or a similar terminal on Windows.
+
+1. Open Git Bash or a compatible terminal.
+2. Navigate to the project directory:
+   ```bash
+   cd c:/Users/konra/Documents/git/python_transcriber
+   ```
+3. Run the script:
+   ```bash
+   bash ffmpeg_install.sh
+   ```
+4. Follow the on-screen instructions to complete the installation.
+
+After installation, verify FFmpeg is installed by running:
+```bash
+ffmpeg -version
+```
+
 ## Installation
 1. Clone the repository:
    ```bash
@@ -39,7 +58,7 @@ Python Transcriber is a free and easy-to-use tool for transcribing audio files i
    - Transcribe the audio and save the transcription as a `.txt` file.
 
 ## Troubleshooting
-- **FFmpeg not found**: Ensure FFmpeg is installed and added to your system's PATH. Verify by running `ffmpeg -version` in the terminal.
+- **FFmpeg not found**: Ensure FFmpeg is installed and added to your system's PATH. Use the `ffmpeg_install.sh` script if needed.
 - **Vosk model not found**: Ensure the Vosk model is downloaded and placed in the `SRC/vosk-model` directory.
 - **Encoding errors**: Transcriptions are saved with UTF-8 encoding to handle special characters. Ensure your text editor supports UTF-8.
 
